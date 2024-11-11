@@ -48,4 +48,11 @@ export const sponsorData = [
     discountCode: "412Project30",
     description: "",
   },
+  {
+    name: "Summit DevLabs",
+    img: "SDL_Logo_float.png",
+    url: "https://www.summitdevlabs.com/",
+    discountCode: "",
+    description: "Custom software development and consulting services.",
+  }
 ];
