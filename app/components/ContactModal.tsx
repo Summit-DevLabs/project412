@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_USER_ID } from "../utils";
+import emailjs from 'emailjs-com';
+
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -7,6 +10,36 @@ interface ContactModalProps {
 
 const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
+
+  const form = useRef<HTMLFormElement>(null);
+
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (form.current) {
+      emailjs
+        .sendForm(
+          EMAILJS_SERVICE_ID,
+          EMAILJS_TEMPLATE_ID,
+          form.current,
+          EMAILJS_USER_ID
+        )
+        .then(
+          (result) => {
+            console.log(result);
+            alert('Message sent successfully!');
+            onClose();
+            window.location.href = '/';
+          },
+          (error) => {
+            console.log(error.text);
+            alert('Failed to send message. Please try again later.');
+          }
+        );
+    }
+  };
+
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
@@ -30,71 +63,42 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                 </div> */}
               </div>
               <div className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
-                <form action="#" className="space-y-4">
+                <form
+                  ref={form}
+                  onSubmit={sendEmail}
+                >
                   <div>
-                    
                     <input
-                      className="w-full rounded-lg border border-gray-200 p-3 text-sm"
+                      className="w-full rounded-lg border border-gray-200 p-3 mt-2 mb-2 text-sm"
                       placeholder="Name"
+                      name="from_name"
                       type="text"
                       id="name"
                     />
                   </div>
-                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div>
-                      
                       <input
-                        className="w-full rounded-lg border border-gray-200 p-3 text-sm"
+                        className="w-full rounded-lg border border-gray-200 p-3 mt-2 mb-2 text-sm"
                         placeholder="Email address"
                         type="email"
+                        name="from_email"
                         id="email"
                       />
                     </div>
-                    <div>
-                      <input
-                        className="w-full rounded-lg border border-gray-200 p-3 text-sm"
-                        placeholder="Phone Number (optional)"
-                        type="tel"
-                        id="phone"
-                      />
-                    </div>
-                  </div>
-                  {/* <div className="grid grid-cols-1 gap-4 text-center sm:grid-cols-3">
-                    <div>
-                      <label
-                        htmlFor="Option1"
-                        className="block w-full cursor-pointer rounded-lg border border-gray-200 p-3 text-gray-600 hover:border-black has-[:checked]:border-black has-[:checked]:bg-black has-[:checked]:text-white"
-                        tabIndex={0}
-                      >
-                        <input className="sr-only" id="Option1" type="radio" tabIndex={-1} name="option" />
-                        <span className="text-sm"> Option 1 </span>
-                      </label>
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="Option2"
-                        className="block w-full cursor-pointer rounded-lg border border-gray-200 p-3 text-gray-600 hover:border-black has-[:checked]:border-black has-[:checked]:bg-black has-[:checked]:text-white"
-                        tabIndex={0}
-                      >
-                        <input className="sr-only" id="Option2" type="radio" tabIndex={-1} name="option" />
-                        <span className="text-sm"> Option 2 </span>
-                      </label>
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="Option3"
-                        className="block w-full cursor-pointer rounded-lg border border-gray-200 p-3 text-gray-600 hover:border-black has-[:checked]:border-black has-[:checked]:bg-black has-[:checked]:text-white"
-                        tabIndex={0}
-                      >
-                        <input className="sr-only" id="Option3" type="radio" tabIndex={-1} name="option" />
-                        <span className="text-sm"> Option 3 </span>
-                      </label>
-                    </div>
-                  </div> */}
+                    {/* <div>
+                        <input
+                          className="w-full rounded-lg border border-gray-200 p-3 mt-2 mb-2 text-sm"
+                          placeholder="Phone Number (optional)"
+                          name="phone_number"
+                          type="tel"
+                          id="phone"
+                        />
+                      </div> */}
                   <div>
                     <textarea
-                      className="w-full rounded-lg border border-gray p-3 text-sm"
+                      className="w-full rounded-lg border border-gray p-3 mt-2 mb-2 text-sm"
                       placeholder="Message"
+                      name="message"
                       rows={8}
                       id="message"
                     ></textarea>

@@ -1,3 +1,8 @@
+export const EMAILJS_SERVICE_ID = "service_ghfjayq"
+export const EMAILJS_TEMPLATE_ID = "template_440e4fe"
+export const EMAILJS_USER_ID = "m7kzm3k_3CDMLeRgK"
+
+
 export interface Photo {
   id: number;
   src: string;
