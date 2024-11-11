@@ -24,7 +24,7 @@ export default function Footer() {
           >
             <ul className="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
               <li>
-                <a href="https://www.shawn-wilson.com" className="text-gray-500 transition text-lg hover:opacity-75"> Designed by Summit DevLabs &copy; {new Date().getFullYear()}</a>
+                <a href="https://www.summitdevlabs.com" className="text-gray-500 transition text-lg hover:opacity-75"> Designed by Summit DevLabs &copy; {new Date().getFullYear()}</a>
               
               </li>
 
