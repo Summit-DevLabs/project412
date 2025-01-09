@@ -31,3 +31,12 @@ export interface RosterCardProps {
   member?: any;
   sponsor?: any;
 }
+
+export interface Sponsor {
+  id: number;
+  name: string;
+  img: string;
+  alt: string;
+  description: string;
+  newSponsor?: boolean;
+}

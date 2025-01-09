@@ -5,6 +5,11 @@ export const headerButtonData = [
     title: 'Roster',
   },
   {
+    id: 4,
+    link: 'sponsors',
+    title: 'Sponsors'
+  },
+  {
     id: 2,
     link: 'races',
     title: 'Races'
@@ -14,9 +19,4 @@ export const headerButtonData = [
     link: 'media',
     title: 'Media'
   },
-  // {
-  //   id: 4,
-  //   link: 'sponsors',
-  //   title: 'Sponsors'
-  // }
 ];
