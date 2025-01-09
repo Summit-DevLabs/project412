@@ -5,6 +5,7 @@ export const sponsorData = [
     url: "fieldsauto.com",
     discountCode: "",
     description: "At the Fields Auto Group, we work to provide our customers with vehicle options to suit every taste and style",
+    new: false,
   },
   {
     name: "Rush 2 Crush Cancer",
@@ -12,13 +13,17 @@ export const sponsorData = [
     url: "https://www.rushtocrushcancer.org/",
     discountCode: "",
     description: "UPMC Hillman Cancer Center’s goal is life without cancer and Rush to Crush Cancer’s sole mission is to help achieve this goal with each push of the pedal.",
+    new: false,
+
   },
   {
     name: "Big Dog Coffee",
     img: "bigdog.jpg",
     url: "https://www.bigdogcoffeeshop.com/",
     discountCode: "",
-    description: ""
+    description: "",
+    new: false,
+
   },
   {
     name: "ATP Race Consulting",
@@ -26,6 +31,8 @@ export const sponsorData = [
     url: "https://www.atpraceconsulting.info/",
     discountCode: "",
     description: "ATP Race Consulting is a cycling coaching service committed to making better cyclists of all levels. Whether you want to finish the local group ride or be at the front at a national championship, ATP Race Consulting can help you achieve top performance.",
+    new: false,
+
   },
   {
     name: "Silca",
@@ -33,6 +40,8 @@ export const sponsorData = [
     url: "silca.cc",
     discountCode: "Team Store",
     description: "",
+    new: false,
+
   },
   {
     name: "Boyd Cycling",
@@ -40,6 +49,8 @@ export const sponsorData = [
     url: "https://boydcycling.com/",
     discountCode: "",
     description: "Craft wheel manufacturer dedicated to producing the highest quality bicycle wheels.",
+    new: false,
+
   },
   {
     name: "Flow Formulas",
@@ -47,5 +58,15 @@ export const sponsorData = [
     url: "https://flowformulas.com/",
     discountCode: "412Project30",
     description: "",
+    new: false,
+
   },
+  {
+    name: "Summit DevLabs",
+    img: "SDL_Logo_float.png",
+    url: "https://www.summitdevlabs.com/",
+    discountCode: "",
+    description: "Custom software development and consulting services.",
+    new: true
+  }
 ];

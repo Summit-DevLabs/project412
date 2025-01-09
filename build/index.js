@@ -145,10 +145,10 @@ __export(root_exports, {
   default: () => App,
   links: () => links
 });
-var import_react6 = require("@remix-run/react");
+var import_react7 = require("@remix-run/react");
 
 // app/components/Header.tsx
-var import_react3 = require("@remix-run/react");
+var import_react4 = require("@remix-run/react");
 
 // app/components/HeaderButton.tsx
 var import_react2 = require("@remix-run/react"), import_jsx_dev_runtime2 = require("react/jsx-dev-runtime");
@@ -192,6 +192,11 @@ var headerButtonData = [
     title: "Roster"
   },
   {
+    id: 4,
+    link: "sponsors",
+    title: "Sponsors"
+  },
+  {
     id: 2,
     link: "races",
     title: "Races"
@@ -201,198 +206,205 @@ var headerButtonData = [
     link: "media",
     title: "Media"
   }
-  // {
-  //   id: 4,
-  //   link: 'sponsors',
-  //   title: 'Sponsors'
-  // }
 ];
 
 // app/components/Header.tsx
-var import_react4 = require("react");
+var import_react5 = require("react");
 
 // app/components/ContactModal.tsx
-var import_jsx_dev_runtime3 = require("react/jsx-dev-runtime"), ContactModal = ({ isOpen, onClose }) => isOpen ? /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "bg-white rounded-lg shadow-lg p-8 max-w-screen-xl mx-auto", children: [
-  /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-    "button",
-    {
-      className: "absolute top-10 right-10 bg-primary text-black text-4xl rounded-full w-12 h-12 flex items-center justify-center",
-      onClick: onClose,
-      children: "\xD7"
-    },
-    void 0,
-    !1,
-    {
-      fileName: "app/components/ContactModal.tsx",
-      lineNumber: 14,
-      columnNumber: 9
-    },
-    this
-  ),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("section", { className: "bg-gray-100", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "lg:col-span-2 lg:py-12", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("p", { className: "max-w-xl text-lg", children: "Send us a message and we'll get back to you as soon as possible." }, void 0, !1, {
-      fileName: "app/components/ContactModal.tsx",
-      lineNumber: 24,
-      columnNumber: 17
-    }, this) }, void 0, !1, {
-      fileName: "app/components/ContactModal.tsx",
-      lineNumber: 23,
-      columnNumber: 15
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("form", { action: "#", className: "space-y-4", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-        "input",
+var import_react3 = require("react");
+
+// app/utils.ts
+var EMAILJS_SERVICE_ID = "service_ghfjayq", EMAILJS_TEMPLATE_ID = "template_440e4fe", EMAILJS_USER_ID = "m7kzm3k_3CDMLeRgK";
+
+// app/components/ContactModal.tsx
+var import_emailjs_com = __toESM(require("emailjs-com")), import_jsx_dev_runtime3 = require("react/jsx-dev-runtime"), ContactModal = ({ isOpen, onClose }) => {
+  if (!isOpen)
+    return null;
+  let form = (0, import_react3.useRef)(null);
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "bg-white rounded-lg shadow-lg p-8 max-w-screen-xl mx-auto", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
+      "button",
+      {
+        className: "absolute top-10 right-10 bg-primary text-black text-4xl rounded-full w-12 h-12 flex items-center justify-center",
+        onClick: onClose,
+        children: "\xD7"
+      },
+      void 0,
+      !1,
+      {
+        fileName: "app/components/ContactModal.tsx",
+        lineNumber: 47,
+        columnNumber: 9
+      },
+      this
+    ),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("section", { className: "bg-gray-100", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "lg:col-span-2 lg:py-12", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("p", { className: "max-w-xl text-lg", children: "Send us a message and we'll get back to you as soon as possible." }, void 0, !1, {
+        fileName: "app/components/ContactModal.tsx",
+        lineNumber: 57,
+        columnNumber: 17
+      }, this) }, void 0, !1, {
+        fileName: "app/components/ContactModal.tsx",
+        lineNumber: 56,
+        columnNumber: 15
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
+        "form",
         {
-          className: "w-full rounded-lg border border-gray-200 p-3 text-sm",
-          placeholder: "Name",
-          type: "text",
-          id: "name"
+          ref: form,
+          onSubmit: (e) => {
+            e.preventDefault(), form.current && import_emailjs_com.default.sendForm(
+              EMAILJS_SERVICE_ID,
+              EMAILJS_TEMPLATE_ID,
+              form.current,
+              EMAILJS_USER_ID
+            ).then(
+              (result) => {
+                console.log(result), alert("Message sent successfully!"), onClose(), window.location.href = "/";
+              },
+              (error) => {
+                console.log(error.text), alert("Failed to send message. Please try again later.");
+              }
+            );
+          },
+          children: [
+            /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
+              "input",
+              {
+                className: "w-full rounded-lg border border-gray-200 p-3 mt-2 mb-2 text-sm",
+                placeholder: "Name",
+                name: "from_name",
+                type: "text",
+                id: "name"
+              },
+              void 0,
+              !1,
+              {
+                fileName: "app/components/ContactModal.tsx",
+                lineNumber: 71,
+                columnNumber: 21
+              },
+              this
+            ) }, void 0, !1, {
+              fileName: "app/components/ContactModal.tsx",
+              lineNumber: 70,
+              columnNumber: 19
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
+              "input",
+              {
+                className: "w-full rounded-lg border border-gray-200 p-3 mt-2 mb-2 text-sm",
+                placeholder: "Email address",
+                type: "email",
+                name: "from_email",
+                id: "email"
+              },
+              void 0,
+              !1,
+              {
+                fileName: "app/components/ContactModal.tsx",
+                lineNumber: 80,
+                columnNumber: 23
+              },
+              this
+            ) }, void 0, !1, {
+              fileName: "app/components/ContactModal.tsx",
+              lineNumber: 79,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
+              "textarea",
+              {
+                className: "w-full rounded-lg border border-gray p-3 mt-2 mb-2 text-sm",
+                placeholder: "Message",
+                name: "message",
+                rows: 8,
+                id: "message"
+              },
+              void 0,
+              !1,
+              {
+                fileName: "app/components/ContactModal.tsx",
+                lineNumber: 98,
+                columnNumber: 21
+              },
+              this
+            ) }, void 0, !1, {
+              fileName: "app/components/ContactModal.tsx",
+              lineNumber: 97,
+              columnNumber: 19
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "mt-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
+              "button",
+              {
+                type: "submit",
+                className: "inline-block w-full rounded-lg bg-primary px-5 py-3 font-medium text-black sm:w-auto",
+                children: "Send"
+              },
+              void 0,
+              !1,
+              {
+                fileName: "app/components/ContactModal.tsx",
+                lineNumber: 107,
+                columnNumber: 21
+              },
+              this
+            ) }, void 0, !1, {
+              fileName: "app/components/ContactModal.tsx",
+              lineNumber: 106,
+              columnNumber: 19
+            }, this)
+          ]
         },
         void 0,
-        !1,
+        !0,
         {
           fileName: "app/components/ContactModal.tsx",
-          lineNumber: 36,
-          columnNumber: 21
+          lineNumber: 66,
+          columnNumber: 17
         },
         this
       ) }, void 0, !1, {
         fileName: "app/components/ContactModal.tsx",
-        lineNumber: 34,
-        columnNumber: 19
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "grid grid-cols-1 gap-4 sm:grid-cols-2", children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-          "input",
-          {
-            className: "w-full rounded-lg border border-gray-200 p-3 text-sm",
-            placeholder: "Email address",
-            type: "email",
-            id: "email"
-          },
-          void 0,
-          !1,
-          {
-            fileName: "app/components/ContactModal.tsx",
-            lineNumber: 46,
-            columnNumber: 23
-          },
-          this
-        ) }, void 0, !1, {
-          fileName: "app/components/ContactModal.tsx",
-          lineNumber: 44,
-          columnNumber: 21
-        }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-          "input",
-          {
-            className: "w-full rounded-lg border border-gray-200 p-3 text-sm",
-            placeholder: "Phone Number (optional)",
-            type: "tel",
-            id: "phone"
-          },
-          void 0,
-          !1,
-          {
-            fileName: "app/components/ContactModal.tsx",
-            lineNumber: 54,
-            columnNumber: 23
-          },
-          this
-        ) }, void 0, !1, {
-          fileName: "app/components/ContactModal.tsx",
-          lineNumber: 53,
-          columnNumber: 21
-        }, this)
-      ] }, void 0, !0, {
-        fileName: "app/components/ContactModal.tsx",
-        lineNumber: 43,
-        columnNumber: 19
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-        "textarea",
-        {
-          className: "w-full rounded-lg border border-gray p-3 text-sm",
-          placeholder: "Message",
-          rows: 8,
-          id: "message"
-        },
-        void 0,
-        !1,
-        {
-          fileName: "app/components/ContactModal.tsx",
-          lineNumber: 95,
-          columnNumber: 21
-        },
-        this
-      ) }, void 0, !1, {
-        fileName: "app/components/ContactModal.tsx",
-        lineNumber: 94,
-        columnNumber: 19
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "mt-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-        "button",
-        {
-          type: "submit",
-          className: "inline-block w-full rounded-lg bg-primary px-5 py-3 font-medium text-black sm:w-auto",
-          children: "Send"
-        },
-        void 0,
-        !1,
-        {
-          fileName: "app/components/ContactModal.tsx",
-          lineNumber: 103,
-          columnNumber: 21
-        },
-        this
-      ) }, void 0, !1, {
-        fileName: "app/components/ContactModal.tsx",
-        lineNumber: 102,
-        columnNumber: 19
+        lineNumber: 65,
+        columnNumber: 15
       }, this)
     ] }, void 0, !0, {
       fileName: "app/components/ContactModal.tsx",
-      lineNumber: 33,
-      columnNumber: 17
+      lineNumber: 55,
+      columnNumber: 13
     }, this) }, void 0, !1, {
       fileName: "app/components/ContactModal.tsx",
-      lineNumber: 32,
-      columnNumber: 15
+      lineNumber: 54,
+      columnNumber: 11
+    }, this) }, void 0, !1, {
+      fileName: "app/components/ContactModal.tsx",
+      lineNumber: 53,
+      columnNumber: 9
     }, this)
   ] }, void 0, !0, {
     fileName: "app/components/ContactModal.tsx",
-    lineNumber: 22,
-    columnNumber: 13
+    lineNumber: 46,
+    columnNumber: 7
   }, this) }, void 0, !1, {
     fileName: "app/components/ContactModal.tsx",
-    lineNumber: 21,
-    columnNumber: 11
-  }, this) }, void 0, !1, {
-    fileName: "app/components/ContactModal.tsx",
-    lineNumber: 20,
-    columnNumber: 9
-  }, this)
-] }, void 0, !0, {
-  fileName: "app/components/ContactModal.tsx",
-  lineNumber: 13,
-  columnNumber: 7
-}, this) }, void 0, !1, {
-  fileName: "app/components/ContactModal.tsx",
-  lineNumber: 12,
-  columnNumber: 5
-}, this) : null, ContactModal_default = ContactModal;
+    lineNumber: 45,
+    columnNumber: 5
+  }, this);
+}, ContactModal_default = ContactModal;
 
 // app/components/Header.tsx
 var import_jsx_dev_runtime4 = require("react/jsx-dev-runtime");
 function Header() {
-  let [isOpen, setIsOpen] = (0, import_react4.useState)(!1), buttons = headerButtonData, [isModalOpen, setIsModalOpen] = (0, import_react4.useState)(!1), handleOpenModal = () => {
+  let [isOpen, setIsOpen] = (0, import_react5.useState)(!1), buttons = headerButtonData, [isModalOpen, setIsModalOpen] = (0, import_react5.useState)(!1), handleOpenModal = () => {
     setIsModalOpen(!0);
   }, handleCloseModal = () => {
     setIsModalOpen(!1);
   };
   return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_jsx_dev_runtime4.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("header", { className: "bg-gray-50 fixed w-full top-0 z-50 shadow-lg", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "mx-auto max-w-screen-xl px-4 py-4 sm:px-6 sm:py-6 lg:px-8", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "flex flex-col lg:flex-row lg:items-center lg:justify-between", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "flex items-center text-center sm:text-left md:justify-center sm:justify-center xs:justify-center", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_react3.Link, { to: "/", className: "flex items-center", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_react4.Link, { to: "/", className: "flex items-center", children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
           "img",
           {
@@ -548,7 +560,7 @@ __export(coming_soon_exports, {
 });
 
 // app/components/PhotoContainer.tsx
-var import_react5 = require("react");
+var import_react6 = require("react");
 
 // app/components/PhotoCard.tsx
 var import_jsx_dev_runtime5 = require("react/jsx-dev-runtime");
@@ -618,7 +630,7 @@ function PhotoCard({
 // app/components/PhotoContainer.tsx
 var import_jsx_dev_runtime6 = require("react/jsx-dev-runtime");
 function PhotoContainer({ photos, layout, size, filePath, photoStyle, hideAnimation }) {
-  let [isFullScreen, setIsFullScreen] = (0, import_react5.useState)(!1), [currentPhotoIndex, setCurrentPhotoIndex] = (0, import_react5.useState)(0), handleFullScreen = (index) => {
+  let [isFullScreen, setIsFullScreen] = (0, import_react6.useState)(!1), [currentPhotoIndex, setCurrentPhotoIndex] = (0, import_react6.useState)(0), handleFullScreen = (index) => {
     setCurrentPhotoIndex(index), setIsFullScreen(!0);
   }, handleNextPhoto = () => {
     setCurrentPhotoIndex((prevIndex) => (prevIndex + 1) % photos.length);
@@ -815,49 +827,64 @@ var sponsorData = [
     img: "fields.jpg",
     url: "fieldsauto.com",
     discountCode: "",
-    description: "At the Fields Auto Group, we work to provide our customers with vehicle options to suit every taste and style"
+    description: "At the Fields Auto Group, we work to provide our customers with vehicle options to suit every taste and style",
+    new: !1
   },
   {
     name: "Rush 2 Crush Cancer",
     img: "r2c.svg",
     url: "https://www.rushtocrushcancer.org/",
     discountCode: "",
-    description: "UPMC Hillman Cancer Center\u2019s goal is life without cancer and Rush to Crush Cancer\u2019s sole mission is to help achieve this goal with each push of the pedal."
+    description: "UPMC Hillman Cancer Center\u2019s goal is life without cancer and Rush to Crush Cancer\u2019s sole mission is to help achieve this goal with each push of the pedal.",
+    new: !1
   },
   {
     name: "Big Dog Coffee",
     img: "bigdog.jpg",
     url: "https://www.bigdogcoffeeshop.com/",
     discountCode: "",
-    description: ""
+    description: "",
+    new: !1
   },
   {
     name: "ATP Race Consulting",
     img: "atp.jpg",
     url: "https://www.atpraceconsulting.info/",
     discountCode: "",
-    description: "ATP Race Consulting is a cycling coaching service committed to making better cyclists of all levels. Whether you want to finish the local group ride or be at the front at a national championship, ATP Race Consulting can help you achieve top performance."
+    description: "ATP Race Consulting is a cycling coaching service committed to making better cyclists of all levels. Whether you want to finish the local group ride or be at the front at a national championship, ATP Race Consulting can help you achieve top performance.",
+    new: !1
   },
   {
     name: "Silca",
     img: "silca.avif",
     url: "silca.cc",
     discountCode: "Team Store",
-    description: ""
+    description: "",
+    new: !1
   },
   {
     name: "Boyd Cycling",
     img: "boyd.avif",
     url: "https://boydcycling.com/",
     discountCode: "",
-    description: "Craft wheel manufacturer dedicated to producing the highest quality bicycle wheels."
+    description: "Craft wheel manufacturer dedicated to producing the highest quality bicycle wheels.",
+    new: !1
   },
   {
     name: "Flow Formulas",
     img: "flow-blue.png",
     url: "https://flowformulas.com/",
     discountCode: "412Project30",
-    description: ""
+    description: "",
+    new: !1
+  },
+  {
+    name: "Summit DevLabs",
+    img: "SDL_Logo_float.png",
+    url: "https://www.summitdevlabs.com/",
+    discountCode: "",
+    description: "Custom software development and consulting services.",
+    new: !0
   }
 ];
 
@@ -903,7 +930,10 @@ function Footer() {
     {
       className: "border-t border-gray-100 pt-4 sm:flex sm:items-center sm:justify-between lg:mt-2",
       children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("ul", { className: "flex flex-wrap justify-center gap-4 text-xs lg:justify-end", children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("li", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("a", { href: "https://www.shawn-wilson.com", className: "text-gray-500 transition text-lg hover:opacity-75", children: " Designed by Shawn Wilson / Dan Uhranowsky \xA92024 " }, void 0, !1, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("ul", { className: "flex flex-wrap justify-center gap-4 text-xs lg:justify-end", children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("li", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("a", { href: "https://www.summitdevlabs.com", className: "text-gray-500 transition text-lg hover:opacity-75", children: [
+          " Designed by Summit DevLabs \xA9 ",
+          (/* @__PURE__ */ new Date()).getFullYear()
+        ] }, void 0, !0, {
           fileName: "app/components/Footer.tsx",
           lineNumber: 27,
           columnNumber: 17
@@ -926,7 +956,7 @@ function Footer() {
             children: [
               /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("span", { className: "sr-only", children: "Instagram" }, void 0, !1, {
                 fileName: "app/components/Footer.tsx",
-                lineNumber: 66,
+                lineNumber: 67,
                 columnNumber: 19
               }, this),
               /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("svg", { className: "h-8 w-8", fill: "currentColor", viewBox: "0 0 24 24", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(
@@ -940,13 +970,13 @@ function Footer() {
                 !1,
                 {
                   fileName: "app/components/Footer.tsx",
-                  lineNumber: 69,
+                  lineNumber: 70,
                   columnNumber: 21
                 },
                 this
               ) }, void 0, !1, {
                 fileName: "app/components/Footer.tsx",
-                lineNumber: 68,
+                lineNumber: 69,
                 columnNumber: 19
               }, this)
             ]
@@ -955,17 +985,17 @@ function Footer() {
           !0,
           {
             fileName: "app/components/Footer.tsx",
-            lineNumber: 60,
+            lineNumber: 61,
             columnNumber: 17
           },
           this
         ) }, void 0, !1, {
           fileName: "app/components/Footer.tsx",
-          lineNumber: 59,
+          lineNumber: 60,
           columnNumber: 15
         }, this) }, void 0, !1, {
           fileName: "app/components/Footer.tsx",
-          lineNumber: 39,
+          lineNumber: 40,
           columnNumber: 13
         }, this)
       ]
@@ -994,95 +1024,30 @@ function Footer() {
 }
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-HNSJL5DL.css";
+var tailwind_default = "/build/_assets/tailwind-AS6AGUAA.css";
 
 // app/root.tsx
 var import_jsx_dev_runtime9 = require("react/jsx-dev-runtime"), links = () => [{ rel: "stylesheet", href: tailwind_default }];
 function App() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("html", { children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("head", { children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("meta", { name: "viewport", content: "width=device-width, initial-scale=1" }, void 0, !1, {
-        fileName: "app/root.tsx",
-        lineNumber: 27,
-        columnNumber: 5
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("link", { rel: "icon", href: "/assets/logos/p412.png" }, void 0, !1, {
-        fileName: "app/root.tsx",
-        lineNumber: 28,
-        columnNumber: 5
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("title", { children: "Project 412 Cycling" }, void 0, !1, {
-        fileName: "app/root.tsx",
-        lineNumber: 29,
-        columnNumber: 5
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_react6.Meta, {}, void 0, !1, {
-        fileName: "app/root.tsx",
-        lineNumber: 30,
-        columnNumber: 5
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_react6.Links, {}, void 0, !1, {
-        fileName: "app/root.tsx",
-        lineNumber: 31,
-        columnNumber: 5
-      }, this)
-    ] }, void 0, !0, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("div", { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("div", { className: "from-primary w-full bg-gradient-to-b to-black", children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(ComingSoon, {}, void 0, !1, {
       fileName: "app/root.tsx",
-      lineNumber: 26,
-      columnNumber: 4
+      lineNumber: 17,
+      columnNumber: 6
+    }, this) }, void 0, !1, {
+      fileName: "app/root.tsx",
+      lineNumber: 16,
+      columnNumber: 5
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("body", { className: "from-primary flex min-h-screen flex-col bg-gradient-to-b to-black", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(Header, {}, void 0, !1, {
-        fileName: "app/root.tsx",
-        lineNumber: 34,
-        columnNumber: 5
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("div", { className: "w-full flex-grow pb-32 pt-32", children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("div", { className: "mx-auto max-w-screen-2xl", children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_react6.Outlet, {}, void 0, !1, {
-        fileName: "app/root.tsx",
-        lineNumber: 37,
-        columnNumber: 7
-      }, this) }, void 0, !1, {
-        fileName: "app/root.tsx",
-        lineNumber: 36,
-        columnNumber: 6
-      }, this) }, void 0, !1, {
-        fileName: "app/root.tsx",
-        lineNumber: 35,
-        columnNumber: 5
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("div", { className: "mt-auto", children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(Footer, {}, void 0, !1, {
-        fileName: "app/root.tsx",
-        lineNumber: 41,
-        columnNumber: 6
-      }, this) }, void 0, !1, {
-        fileName: "app/root.tsx",
-        lineNumber: 40,
-        columnNumber: 5
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_react6.ScrollRestoration, {}, void 0, !1, {
-        fileName: "app/root.tsx",
-        lineNumber: 43,
-        columnNumber: 5
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_react6.Scripts, {}, void 0, !1, {
-        fileName: "app/root.tsx",
-        lineNumber: 44,
-        columnNumber: 5
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_react6.LiveReload, {}, void 0, !1, {
-        fileName: "app/root.tsx",
-        lineNumber: 45,
-        columnNumber: 5
-      }, this)
-    ] }, void 0, !0, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_react7.Links, {}, void 0, !1, {
       fileName: "app/root.tsx",
-      lineNumber: 33,
-      columnNumber: 4
+      lineNumber: 19,
+      columnNumber: 5
     }, this)
   ] }, void 0, !0, {
     fileName: "app/root.tsx",
-    lineNumber: 25,
-    columnNumber: 5
+    lineNumber: 15,
+    columnNumber: 7
   }, this);
 }
 
@@ -1091,30 +1056,117 @@ var sponsors_exports = {};
 __export(sponsors_exports, {
   default: () => Sponsors
 });
-var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime");
+
+// app/components/FadeIn.tsx
+var import_react8 = require("react"), import_framer_motion = require("framer-motion"), import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), FadeInStaggerContext = (0, import_react8.createContext)(!1), viewport = { once: !0, margin: "0px 0px -200px" };
+function FadeIn(props) {
+  let shouldReduceMotion = (0, import_framer_motion.useReducedMotion)(), isInStaggerGroup = (0, import_react8.useContext)(FadeInStaggerContext);
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+    import_framer_motion.motion.div,
+    {
+      variants: {
+        hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 24 },
+        visible: { opacity: 1, y: 0 }
+      },
+      transition: { duration: 0.5 },
+      ...isInStaggerGroup ? {} : {
+        initial: "hidden",
+        whileInView: "visible",
+        viewport
+      },
+      ...props
+    },
+    void 0,
+    !1,
+    {
+      fileName: "app/components/FadeIn.tsx",
+      lineNumber: 17,
+      columnNumber: 5
+    },
+    this
+  );
+}
+
+// app/routes/sponsors.tsx
+var import_jsx_dev_runtime11 = require("react/jsx-dev-runtime");
 function Sponsors() {
   let photos = sponsorData.sort((a, b) => a.name.localeCompare(b.name)).map((sponsor, index) => ({
     id: index,
     src: sponsor.img,
     alt: sponsor.name,
     title: sponsor.name,
-    description: sponsor.description
+    description: sponsor.description,
+    newSponsor: sponsor.new
   }));
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_jsx_dev_runtime10.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "md:mt-12 sm:mt-16 lg:mt-2", children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "flex w-full mx-auto", children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(PhotoContainer, { layout: "grid", photos, size: "medium", filePath: "logos", photoStyle: "contain" }, void 0, !1, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_jsx_dev_runtime11.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("div", { className: "md:mt-12 sm:mt-16 lg:mt-2", children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("div", { className: "flex w-full mx-auto", children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("ul", { role: "list", className: "grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3", children: photos.map((photo) => /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(
+    FadeIn,
+    {
+      children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("li", { className: "col-span-1 divide-y divide-gray-200 rounded-lg bg-white shadow", children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("div", { className: "flex w-full items-center justify-between space-x-6 p-6", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("div", { className: "flex-1 truncate", children: [
+          /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("div", { className: "flex items-center space-x-3", children: [
+            /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("h3", { className: "truncate text-sm font-medium text-gray-900", children: photo.title }, void 0, !1, {
+              fileName: "app/routes/sponsors.tsx",
+              lineNumber: 31,
+              columnNumber: 23
+            }, this),
+            photo.newSponsor ? /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("span", { className: "inline-flex shrink-0 items-center rounded-full bg-green-50 px-1.5 py-0.5 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20", children: "New" }, void 0, !1, {
+              fileName: "app/routes/sponsors.tsx",
+              lineNumber: 32,
+              columnNumber: 43
+            }, this) : ""
+          ] }, void 0, !0, {
+            fileName: "app/routes/sponsors.tsx",
+            lineNumber: 30,
+            columnNumber: 21
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("p", { className: "mt-1 truncate text-sm text-gray-500", children: photo.description }, void 0, !1, {
+            fileName: "app/routes/sponsors.tsx",
+            lineNumber: 34,
+            columnNumber: 21
+          }, this)
+        ] }, void 0, !0, {
+          fileName: "app/routes/sponsors.tsx",
+          lineNumber: 29,
+          columnNumber: 19
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("img", { alt: "", src: `/assets/logos/${photo.src}`, className: "size-14 shrink-0 rounded-full bg-gray-300" }, void 0, !1, {
+          fileName: "app/routes/sponsors.tsx",
+          lineNumber: 36,
+          columnNumber: 19
+        }, this)
+      ] }, void 0, !0, {
+        fileName: "app/routes/sponsors.tsx",
+        lineNumber: 28,
+        columnNumber: 17
+      }, this) }, photo.id, !1, {
+        fileName: "app/routes/sponsors.tsx",
+        lineNumber: 27,
+        columnNumber: 15
+      }, this)
+    },
+    void 0,
+    !1,
+    {
+      fileName: "app/routes/sponsors.tsx",
+      lineNumber: 25,
+      columnNumber: 15
+    },
+    this
+  )) }, void 0, !1, {
     fileName: "app/routes/sponsors.tsx",
-    lineNumber: 20,
+    lineNumber: 23,
     columnNumber: 11
   }, this) }, void 0, !1, {
     fileName: "app/routes/sponsors.tsx",
-    lineNumber: 19,
+    lineNumber: 22,
     columnNumber: 9
   }, this) }, void 0, !1, {
     fileName: "app/routes/sponsors.tsx",
-    lineNumber: 18,
+    lineNumber: 21,
     columnNumber: 7
   }, this) }, void 0, !1, {
     fileName: "app/routes/sponsors.tsx",
-    lineNumber: 17,
+    lineNumber: 20,
     columnNumber: 5
   }, this);
 }
@@ -1331,8 +1383,33 @@ var landingPagePhotos = [
   }
 ];
 
+// app/components/NewsSection.tsx
+var import_jsx_dev_runtime12 = require("react/jsx-dev-runtime");
+function NewsSection() {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("section", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "bg-black text-white py-4 px-6 mb-8 rounded-lg", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("h1", { className: "text-2xl font-bold", children: "News Section" }, void 0, !1, {
+      fileName: "app/components/NewsSection.tsx",
+      lineNumber: 7,
+      columnNumber: 9
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("p", { className: "mt-2", children: "Stay updated with the latest news" }, void 0, !1, {
+      fileName: "app/components/NewsSection.tsx",
+      lineNumber: 8,
+      columnNumber: 9
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/components/NewsSection.tsx",
+    lineNumber: 6,
+    columnNumber: 7
+  }, this) }, void 0, !1, {
+    fileName: "app/components/NewsSection.tsx",
+    lineNumber: 3,
+    columnNumber: 5
+  }, this);
+}
+
 // app/routes/_index.tsx
-var import_jsx_dev_runtime11 = require("react/jsx-dev-runtime");
+var import_jsx_dev_runtime13 = require("react/jsx-dev-runtime");
 function Index() {
   let photos = landingPagePhotos, sponsorPhotos = sponsorData.map((sponsor, index) => ({
     id: index,
@@ -1341,35 +1418,40 @@ function Index() {
     title: sponsor.name,
     description: sponsor.description
   }));
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_jsx_dev_runtime11.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("div", { className: "md:mt-12 sm:mt-16 lg:mt-2", children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("div", { className: "flex flex-col justify-center items-center", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(PhotoContainer, { layout: "col", photos, size: "large", filePath: "media", photoStyle: "cover", hideAnimation: !0 }, void 0, !1, {
-        fileName: "app/routes/_index.tsx",
-        lineNumber: 24,
-        columnNumber: 11
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("p", { className: "text-white text-2xl py-12 px-4 lg:py-24 lg:px-24 text-center", children: "Project 412 is focused on competition, philanthropic efforts and community engagement. We are dedicated to promoting the sport of cycling and inspiring the next generation, regardless of background, financial means or experience level. Come ride with us!" }, void 0, !1, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_jsx_dev_runtime13.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("div", { className: "md:mt-12 sm:mt-16 lg:mt-2", children: /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("div", { className: "flex flex-col justify-center items-center", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(PhotoContainer, { layout: "col", photos, size: "large", filePath: "media", photoStyle: "cover", hideAnimation: !0 }, void 0, !1, {
         fileName: "app/routes/_index.tsx",
         lineNumber: 25,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("p", { className: "text-white text-2xl py-12 px-4 lg:py-24 lg:px-24 text-center", children: "Project 412 is focused on competition, philanthropic efforts and community engagement. We are dedicated to promoting the sport of cycling and inspiring the next generation, regardless of background, financial means or experience level. Come ride with us!" }, void 0, !1, {
+        fileName: "app/routes/_index.tsx",
+        lineNumber: 26,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(NewsSection, {}, void 0, !1, {
+        fileName: "app/routes/_index.tsx",
+        lineNumber: 30,
         columnNumber: 11
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 23,
+      lineNumber: 24,
       columnNumber: 9
     }, this) }, void 0, !1, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 19,
+      lineNumber: 20,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(PhotoContainer, { layout: "row", photos: sponsorPhotos, size: "medium", filePath: "logos", photoStyle: "contain" }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(PhotoContainer, { layout: "row", photos: sponsorPhotos, size: "medium", filePath: "logos", photoStyle: "contain" }, void 0, !1, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 31,
+      lineNumber: 34,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/_index.tsx",
-    lineNumber: 18,
+    lineNumber: 19,
     columnNumber: 5
   }, this);
 }
@@ -1529,9 +1611,9 @@ var teamData = [
 ];
 
 // app/components/Card.tsx
-var import_jsx_dev_runtime12 = require("react/jsx-dev-runtime");
+var import_jsx_dev_runtime14 = require("react/jsx-dev-runtime");
 function Card({ member }) {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(import_jsx_dev_runtime12.Fragment, { children: member.img === "" ? /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "relative block h-96 min-h-full w-72 rounded-lg bg-black", children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "absolute bottom-8 left-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("p", { className: "text-xl font-bold text-white sm:text-2xl", children: [
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(import_jsx_dev_runtime14.Fragment, { children: member.img === "" ? /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("div", { className: "relative block h-96 min-h-full w-72 rounded-lg bg-black", children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("div", { className: "absolute bottom-8 left-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("p", { className: "text-xl font-bold text-white sm:text-2xl", children: [
     member.firstName,
     " ",
     member.lastName
@@ -1547,8 +1629,8 @@ function Card({ member }) {
     fileName: "app/components/Card.tsx",
     lineNumber: 7,
     columnNumber: 5
-  }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "relative block h-96 w-72 rounded-lg bg-black", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+  }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("div", { className: "relative block h-96 w-72 rounded-lg bg-black", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
       "img",
       {
         alt: "Headshot",
@@ -1564,7 +1646,7 @@ function Card({ member }) {
       },
       this
     ),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "absolute bottom-8 rounded-br-lg rounded-tr-lg bg-black", children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "px-2 py-1", children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("p", { className: "text-xl font-bold text-white sm:text-2xl", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("div", { className: "absolute bottom-8 rounded-br-lg rounded-tr-lg bg-black", children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("div", { className: "px-2 py-1", children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("p", { className: "text-xl font-bold text-white sm:text-2xl", children: [
       member.firstName,
       " ",
       member.lastName
@@ -1593,9 +1675,9 @@ function Card({ member }) {
 }
 
 // app/routes/roster.tsx
-var import_jsx_dev_runtime13 = require("react/jsx-dev-runtime");
+var import_jsx_dev_runtime15 = require("react/jsx-dev-runtime");
 function Roster() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_jsx_dev_runtime13.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("div", { className: "sm:pt-12 md:pt-16 lg:pt-8 flex justify-center items-center flex-wrap", children: teamData.sort((a, b) => a.lastName.localeCompare(b.lastName)).map((member) => member.isActive ? /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("div", { className: "p-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(Card, { member }, void 0, !1, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(import_jsx_dev_runtime15.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("div", { className: "sm:pt-12 md:pt-16 lg:pt-8 flex justify-center items-center flex-wrap", children: teamData.sort((a, b) => a.lastName.localeCompare(b.lastName)).map((member) => member.isActive ? /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("div", { className: "p-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(Card, { member }, void 0, !1, {
     fileName: "app/routes/roster.tsx",
     lineNumber: 14,
     columnNumber: 17
@@ -1619,18 +1701,158 @@ var media_exports = {};
 __export(media_exports, {
   default: () => Media
 });
-var import_jsx_dev_runtime14 = require("react/jsx-dev-runtime");
+var import_jsx_dev_runtime16 = require("react/jsx-dev-runtime");
 function Media() {
   let photos = mediaPagePhotos.reverse();
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(import_jsx_dev_runtime14.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("div", { className: "md:mt-12 sm:mt-16 lg:mt-2", children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(PhotoContainer, { photos, layout: "grid", size: "medium", filePath: "media", photoStyle: "cover" }, void 0, !1, {
-    fileName: "app/routes/media.tsx",
-    lineNumber: 9,
-    columnNumber: 9
-  }, this) }, void 0, !1, {
-    fileName: "app/routes/media.tsx",
-    lineNumber: 8,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_jsx_dev_runtime16.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { className: "mb-8 grid grid-cols-2 md:grid-cols-4 gap-4", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { className: "grid gap-4", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("img", { className: "h-auto max-w-full rounded-lg", src: "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg", alt: "" }, void 0, !1, {
+          fileName: "app/routes/media.tsx",
+          lineNumber: 11,
+          columnNumber: 13
+        }, this) }, void 0, !1, {
+          fileName: "app/routes/media.tsx",
+          lineNumber: 10,
+          columnNumber: 9
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("img", { className: "h-auto max-w-full rounded-lg", src: "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg", alt: "" }, void 0, !1, {
+          fileName: "app/routes/media.tsx",
+          lineNumber: 14,
+          columnNumber: 13
+        }, this) }, void 0, !1, {
+          fileName: "app/routes/media.tsx",
+          lineNumber: 13,
+          columnNumber: 9
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("img", { className: "h-auto max-w-full rounded-lg", src: "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg", alt: "" }, void 0, !1, {
+          fileName: "app/routes/media.tsx",
+          lineNumber: 17,
+          columnNumber: 13
+        }, this) }, void 0, !1, {
+          fileName: "app/routes/media.tsx",
+          lineNumber: 16,
+          columnNumber: 9
+        }, this)
+      ] }, void 0, !0, {
+        fileName: "app/routes/media.tsx",
+        lineNumber: 9,
+        columnNumber: 5
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { className: "grid gap-4", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("img", { className: "h-auto max-w-full rounded-lg", src: "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg", alt: "" }, void 0, !1, {
+          fileName: "app/routes/media.tsx",
+          lineNumber: 22,
+          columnNumber: 13
+        }, this) }, void 0, !1, {
+          fileName: "app/routes/media.tsx",
+          lineNumber: 21,
+          columnNumber: 9
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("img", { className: "h-auto max-w-full rounded-lg", src: "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg", alt: "" }, void 0, !1, {
+          fileName: "app/routes/media.tsx",
+          lineNumber: 25,
+          columnNumber: 13
+        }, this) }, void 0, !1, {
+          fileName: "app/routes/media.tsx",
+          lineNumber: 24,
+          columnNumber: 9
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("img", { className: "h-auto max-w-full rounded-lg", src: "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg", alt: "" }, void 0, !1, {
+          fileName: "app/routes/media.tsx",
+          lineNumber: 28,
+          columnNumber: 13
+        }, this) }, void 0, !1, {
+          fileName: "app/routes/media.tsx",
+          lineNumber: 27,
+          columnNumber: 9
+        }, this)
+      ] }, void 0, !0, {
+        fileName: "app/routes/media.tsx",
+        lineNumber: 20,
+        columnNumber: 5
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { className: "grid gap-4", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("img", { className: "h-auto max-w-full rounded-lg", src: "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg", alt: "" }, void 0, !1, {
+          fileName: "app/routes/media.tsx",
+          lineNumber: 33,
+          columnNumber: 13
+        }, this) }, void 0, !1, {
+          fileName: "app/routes/media.tsx",
+          lineNumber: 32,
+          columnNumber: 9
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("img", { className: "h-auto max-w-full rounded-lg", src: "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg", alt: "" }, void 0, !1, {
+          fileName: "app/routes/media.tsx",
+          lineNumber: 36,
+          columnNumber: 13
+        }, this) }, void 0, !1, {
+          fileName: "app/routes/media.tsx",
+          lineNumber: 35,
+          columnNumber: 9
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("img", { className: "h-auto max-w-full rounded-lg", src: "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg", alt: "" }, void 0, !1, {
+          fileName: "app/routes/media.tsx",
+          lineNumber: 39,
+          columnNumber: 13
+        }, this) }, void 0, !1, {
+          fileName: "app/routes/media.tsx",
+          lineNumber: 38,
+          columnNumber: 9
+        }, this)
+      ] }, void 0, !0, {
+        fileName: "app/routes/media.tsx",
+        lineNumber: 31,
+        columnNumber: 5
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { className: "grid gap-4", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("img", { className: "h-auto max-w-full rounded-lg", src: "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg", alt: "" }, void 0, !1, {
+          fileName: "app/routes/media.tsx",
+          lineNumber: 44,
+          columnNumber: 13
+        }, this) }, void 0, !1, {
+          fileName: "app/routes/media.tsx",
+          lineNumber: 43,
+          columnNumber: 9
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("img", { className: "h-auto max-w-full rounded-lg", src: "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg", alt: "" }, void 0, !1, {
+          fileName: "app/routes/media.tsx",
+          lineNumber: 47,
+          columnNumber: 13
+        }, this) }, void 0, !1, {
+          fileName: "app/routes/media.tsx",
+          lineNumber: 46,
+          columnNumber: 9
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("img", { className: "h-auto max-w-full rounded-lg", src: "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg", alt: "" }, void 0, !1, {
+          fileName: "app/routes/media.tsx",
+          lineNumber: 50,
+          columnNumber: 13
+        }, this) }, void 0, !1, {
+          fileName: "app/routes/media.tsx",
+          lineNumber: 49,
+          columnNumber: 9
+        }, this)
+      ] }, void 0, !0, {
+        fileName: "app/routes/media.tsx",
+        lineNumber: 42,
+        columnNumber: 5
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/routes/media.tsx",
+      lineNumber: 8,
+      columnNumber: 5
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { className: "md:mt-12 sm:mt-16 lg:mt-2", children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(PhotoContainer, { photos, layout: "grid", size: "medium", filePath: "media", photoStyle: "cover" }, void 0, !1, {
+      fileName: "app/routes/media.tsx",
+      lineNumber: 55,
+      columnNumber: 9
+    }, this) }, void 0, !1, {
+      fileName: "app/routes/media.tsx",
+      lineNumber: 54,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
     fileName: "app/routes/media.tsx",
     lineNumber: 7,
     columnNumber: 5
@@ -1792,26 +2014,26 @@ var raceData = [
 ];
 
 // app/components/RaceCard.tsx
-var import_jsx_dev_runtime15 = require("react/jsx-dev-runtime");
+var import_jsx_dev_runtime17 = require("react/jsx-dev-runtime");
 function RaceCard({ race, isFuture }) {
   let today = /* @__PURE__ */ new Date();
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("div", { className: `bg-gray-100 p-4 rounded-md mb-4 w-[70%] ${isFuture ? "bg-white" : "bg-gray-400"}`, children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("strong", { className: "", children: race.raceName }, void 0, !1, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("div", { className: `bg-gray-100 p-4 rounded-md mb-4 w-[70%] ${isFuture ? "bg-white" : "bg-gray-400"}`, children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("strong", { className: "", children: race.raceName }, void 0, !1, {
       fileName: "app/components/RaceCard.tsx",
       lineNumber: 8,
       columnNumber: 4
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("p", { className: `${isFuture ? "" : "line-through"}`, children: race.date }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("p", { className: `${isFuture ? "" : "line-through"}`, children: race.date }, void 0, !1, {
       fileName: "app/components/RaceCard.tsx",
       lineNumber: 9,
       columnNumber: 4
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("p", { children: race.location }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("p", { children: race.location }, void 0, !1, {
       fileName: "app/components/RaceCard.tsx",
       lineNumber: 10,
       columnNumber: 4
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("p", { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("p", { children: [
       "Type: ",
       race.type
     ] }, void 0, !0, {
@@ -1827,7 +2049,7 @@ function RaceCard({ race, isFuture }) {
 }
 
 // app/routes/races.tsx
-var import_jsx_dev_runtime16 = require("react/jsx-dev-runtime");
+var import_jsx_dev_runtime18 = require("react/jsx-dev-runtime");
 function Races() {
   let today = /* @__PURE__ */ new Date();
   today.setHours(0, 0, 0, 0);
@@ -1835,17 +2057,17 @@ function Races() {
     let parts = race.date.split(" "), days = parts[0].split("-"), month = parts[1], formattedDate = days.length > 1 ? `${month} ${days[0]}-${days[1]}` : `${month} ${days[0]}`, raceDate = new Date(Date.parse(`${month} ${days[0]}, ${(/* @__PURE__ */ new Date()).getFullYear()}`)), isFuture = raceDate > today;
     return { ...race, date: formattedDate, isFuture, raceDate };
   }).sort((a, b) => a.raceDate.getTime() - b.raceDate.getTime());
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_jsx_dev_runtime16.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { className: "px-4 gradient-bg", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("h1", { className: "text-2xl font-bold mb-4 sm:pt-16 md:pt-16 flex justify-center items-center", children: "Upcoming Races" }, void 0, !1, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(import_jsx_dev_runtime18.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "px-4 gradient-bg", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("h1", { className: "text-2xl font-bold mb-4 sm:pt-16 md:pt-16 flex justify-center items-center", children: "Upcoming Races" }, void 0, !1, {
       fileName: "app/routes/races.tsx",
       lineNumber: 24,
       columnNumber: 9
     }, this),
-    races.length === 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("h1", { children: "More race events coming soon!" }, void 0, !1, {
+    races.length === 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("h1", { children: "More race events coming soon!" }, void 0, !1, {
       fileName: "app/routes/races.tsx",
       lineNumber: 26,
       columnNumber: 11
-    }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { className: "flex flex-wrap justify-center items-center", children: races.map((race) => /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { className: "flex justify-center items-center m-2 w-full md:w-[40%] lg:w-[40%] xl:w-[30%]", children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(RaceCard, { race, isFuture: race.isFuture }, void 0, !1, {
+    }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "flex flex-wrap justify-center items-center", children: races.map((race) => /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "flex justify-center items-center m-2 w-full md:w-[40%] lg:w-[40%] xl:w-[30%]", children: /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(RaceCard, { race, isFuture: race.isFuture }, void 0, !1, {
       fileName: "app/routes/races.tsx",
       lineNumber: 31,
       columnNumber: 17
@@ -1870,7 +2092,7 @@ function Races() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-NNYPSFPS.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-7GIFAQ7M.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-EW54I7OG.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-57LVWQ4O.js", imports: ["/build/_shared/chunk-PNCPL2B3.js", "/build/_shared/chunk-T2YRPOP2.js", "/build/_shared/chunk-V7QB77PW.js"], hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-2RXO4I7P.js", imports: ["/build/_shared/chunk-FA7CX3CC.js"], hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/coming-soon": { id: "routes/coming-soon", parentId: "root", path: "coming-soon", index: void 0, caseSensitive: void 0, module: "/build/routes/coming-soon-6RASBLGH.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/media": { id: "routes/media", parentId: "root", path: "media", index: void 0, caseSensitive: void 0, module: "/build/routes/media-64WSYQQV.js", imports: ["/build/_shared/chunk-FA7CX3CC.js"], hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/races": { id: "routes/races", parentId: "root", path: "races", index: void 0, caseSensitive: void 0, module: "/build/routes/races-LEPJ6Q4P.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/roster": { id: "routes/roster", parentId: "root", path: "roster", index: void 0, caseSensitive: void 0, module: "/build/routes/roster-7FZUPQBU.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/sponsors": { id: "routes/sponsors", parentId: "root", path: "sponsors", index: void 0, caseSensitive: void 0, module: "/build/routes/sponsors-54SFIQDV.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "b702cc79", hmr: { runtime: "/build/_shared/chunk-EW54I7OG.js", timestamp: 1730812605392 }, url: "/build/manifest-B702CC79.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-AVE5YZJC.js", imports: ["/build/_shared/chunk-OAPPX4FA.js", "/build/_shared/chunk-F6I3JBLQ.js", "/build/_shared/chunk-WEAPBHQG.js", "/build/_shared/chunk-OTHDCHFR.js", "/build/_shared/chunk-JR22VO6P.js", "/build/_shared/chunk-7PHB3BFD.js", "/build/_shared/chunk-CJ4MY3PQ.js", "/build/_shared/chunk-PZDJHGND.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-UJ7S45SH.js", imports: ["/build/_shared/chunk-3PQIRVHF.js", "/build/_shared/chunk-LLPHLUA4.js", "/build/_shared/chunk-5FHAFLDN.js"], hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-HB6L7ALU.js", imports: ["/build/_shared/chunk-CGM7SS4R.js"], hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/coming-soon": { id: "routes/coming-soon", parentId: "root", path: "coming-soon", index: void 0, caseSensitive: void 0, module: "/build/routes/coming-soon-DY5CLV2I.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/media": { id: "routes/media", parentId: "root", path: "media", index: void 0, caseSensitive: void 0, module: "/build/routes/media-EKVQ2KNF.js", imports: ["/build/_shared/chunk-CGM7SS4R.js"], hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/races": { id: "routes/races", parentId: "root", path: "races", index: void 0, caseSensitive: void 0, module: "/build/routes/races-GSEJ4UAT.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/roster": { id: "routes/roster", parentId: "root", path: "roster", index: void 0, caseSensitive: void 0, module: "/build/routes/roster-MIFJDU7I.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/sponsors": { id: "routes/sponsors", parentId: "root", path: "sponsors", index: void 0, caseSensitive: void 0, module: "/build/routes/sponsors-INFCOFAS.js", imports: ["/build/_shared/chunk-2QJY4JOV.js"], hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "f24e00c8", hmr: { runtime: "/build/_shared/chunk-OTHDCHFR.js", timestamp: 1736456523917 }, url: "/build/manifest-F24E00C8.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1, v3_relativeSplatPath: !1 }, publicPath = "/build/", entry = { module: entry_server_node_exports }, routes = {
