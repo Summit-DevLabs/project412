@@ -1029,25 +1029,90 @@ var tailwind_default = "/build/_assets/tailwind-AS6AGUAA.css";
 // app/root.tsx
 var import_jsx_dev_runtime9 = require("react/jsx-dev-runtime"), links = () => [{ rel: "stylesheet", href: tailwind_default }];
 function App() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("div", { children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("div", { className: "from-primary w-full bg-gradient-to-b to-black", children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(ComingSoon, {}, void 0, !1, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("html", { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("head", { children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("meta", { name: "viewport", content: "width=device-width, initial-scale=1" }, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 27,
+        columnNumber: 5
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("link", { rel: "icon", href: "/assets/logos/p412.png" }, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 28,
+        columnNumber: 5
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("title", { children: "Project 412 Cycling" }, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 29,
+        columnNumber: 5
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_react7.Meta, {}, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 30,
+        columnNumber: 5
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_react7.Links, {}, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 31,
+        columnNumber: 5
+      }, this)
+    ] }, void 0, !0, {
       fileName: "app/root.tsx",
-      lineNumber: 17,
-      columnNumber: 6
-    }, this) }, void 0, !1, {
-      fileName: "app/root.tsx",
-      lineNumber: 16,
-      columnNumber: 5
+      lineNumber: 26,
+      columnNumber: 4
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_react7.Links, {}, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("body", { className: "from-primary flex min-h-screen flex-col bg-gradient-to-b to-black", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(Header, {}, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 34,
+        columnNumber: 5
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("div", { className: "w-full flex-grow pb-32 pt-32", children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("div", { className: "mx-auto max-w-screen-2xl", children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_react7.Outlet, {}, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 37,
+        columnNumber: 7
+      }, this) }, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 36,
+        columnNumber: 6
+      }, this) }, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 35,
+        columnNumber: 5
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("div", { className: "mt-auto", children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(Footer, {}, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 41,
+        columnNumber: 6
+      }, this) }, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 40,
+        columnNumber: 5
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_react7.ScrollRestoration, {}, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 43,
+        columnNumber: 5
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_react7.Scripts, {}, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 44,
+        columnNumber: 5
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_react7.LiveReload, {}, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 45,
+        columnNumber: 5
+      }, this)
+    ] }, void 0, !0, {
       fileName: "app/root.tsx",
-      lineNumber: 19,
-      columnNumber: 5
+      lineNumber: 33,
+      columnNumber: 4
     }, this)
   ] }, void 0, !0, {
     fileName: "app/root.tsx",
-    lineNumber: 15,
-    columnNumber: 7
+    lineNumber: 25,
+    columnNumber: 5
   }, this);
 }
 
@@ -2092,7 +2157,7 @@ function Races() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-AVE5YZJC.js", imports: ["/build/_shared/chunk-OAPPX4FA.js", "/build/_shared/chunk-F6I3JBLQ.js", "/build/_shared/chunk-WEAPBHQG.js", "/build/_shared/chunk-OTHDCHFR.js", "/build/_shared/chunk-JR22VO6P.js", "/build/_shared/chunk-7PHB3BFD.js", "/build/_shared/chunk-CJ4MY3PQ.js", "/build/_shared/chunk-PZDJHGND.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-UJ7S45SH.js", imports: ["/build/_shared/chunk-3PQIRVHF.js", "/build/_shared/chunk-LLPHLUA4.js", "/build/_shared/chunk-5FHAFLDN.js"], hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-HB6L7ALU.js", imports: ["/build/_shared/chunk-CGM7SS4R.js"], hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/coming-soon": { id: "routes/coming-soon", parentId: "root", path: "coming-soon", index: void 0, caseSensitive: void 0, module: "/build/routes/coming-soon-DY5CLV2I.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/media": { id: "routes/media", parentId: "root", path: "media", index: void 0, caseSensitive: void 0, module: "/build/routes/media-EKVQ2KNF.js", imports: ["/build/_shared/chunk-CGM7SS4R.js"], hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/races": { id: "routes/races", parentId: "root", path: "races", index: void 0, caseSensitive: void 0, module: "/build/routes/races-GSEJ4UAT.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/roster": { id: "routes/roster", parentId: "root", path: "roster", index: void 0, caseSensitive: void 0, module: "/build/routes/roster-MIFJDU7I.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/sponsors": { id: "routes/sponsors", parentId: "root", path: "sponsors", index: void 0, caseSensitive: void 0, module: "/build/routes/sponsors-INFCOFAS.js", imports: ["/build/_shared/chunk-2QJY4JOV.js"], hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "f24e00c8", hmr: { runtime: "/build/_shared/chunk-OTHDCHFR.js", timestamp: 1736456523917 }, url: "/build/manifest-F24E00C8.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-AVE5YZJC.js", imports: ["/build/_shared/chunk-OAPPX4FA.js", "/build/_shared/chunk-F6I3JBLQ.js", "/build/_shared/chunk-WEAPBHQG.js", "/build/_shared/chunk-OTHDCHFR.js", "/build/_shared/chunk-JR22VO6P.js", "/build/_shared/chunk-7PHB3BFD.js", "/build/_shared/chunk-CJ4MY3PQ.js", "/build/_shared/chunk-PZDJHGND.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-SDNDFORW.js", imports: ["/build/_shared/chunk-NEZPRVU6.js", "/build/_shared/chunk-UT5AQGXZ.js", "/build/_shared/chunk-5FHAFLDN.js"], hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-C7TXS7QG.js", imports: ["/build/_shared/chunk-CGM7SS4R.js"], hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/coming-soon": { id: "routes/coming-soon", parentId: "root", path: "coming-soon", index: void 0, caseSensitive: void 0, module: "/build/routes/coming-soon-KZYG7CKL.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/media": { id: "routes/media", parentId: "root", path: "media", index: void 0, caseSensitive: void 0, module: "/build/routes/media-7SWY4RWH.js", imports: ["/build/_shared/chunk-CGM7SS4R.js"], hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/races": { id: "routes/races", parentId: "root", path: "races", index: void 0, caseSensitive: void 0, module: "/build/routes/races-GSEJ4UAT.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/roster": { id: "routes/roster", parentId: "root", path: "roster", index: void 0, caseSensitive: void 0, module: "/build/routes/roster-MIFJDU7I.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/sponsors": { id: "routes/sponsors", parentId: "root", path: "sponsors", index: void 0, caseSensitive: void 0, module: "/build/routes/sponsors-3NI7PNIL.js", imports: ["/build/_shared/chunk-2QJY4JOV.js"], hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "5f2b08f3", hmr: { runtime: "/build/_shared/chunk-OTHDCHFR.js", timestamp: 1736459321104 }, url: "/build/manifest-5F2B08F3.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1, v3_relativeSplatPath: !1 }, publicPath = "/build/", entry = { module: entry_server_node_exports }, routes = {

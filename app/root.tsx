@@ -9,7 +9,7 @@ import styles from './tailwind.css';
 export const links: LinksFunction = () => [{ rel: 'stylesheet', href: styles }];
 
 export default function App() {
-	const underMaintenance = true; // Set to false when ready to launch
+	const underMaintenance = false; // Set to false when ready to launch
 	if (underMaintenance) {
 		return (
 			<div>
