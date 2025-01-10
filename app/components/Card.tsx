@@ -4,7 +4,7 @@ export default function Card({ member }: RosterCardProps) {
 	return (
 		<>
 			{member.img === '' ? (
-				<div className="relative block h-96 min-h-full w-72 rounded-lg bg-black">
+				<div className="relative block h-96 min-h-full w-72 rounded-xl bg-black">
 					<div className="absolute bottom-8 left-4">
 						<p className="text-xl font-bold text-white sm:text-2xl">
 							{member.firstName} {member.lastName}
@@ -13,7 +13,7 @@ export default function Card({ member }: RosterCardProps) {
 					</div>
 				</div>
 			) : (
-				<div className="relative block h-96 w-72 rounded-lg bg-black">
+				<div className="relative block h-96 w-72 rounded-xl bg-black">
 					<img
 						alt="Headshot"
 						src={`./assets/headshots/${member.img}`}

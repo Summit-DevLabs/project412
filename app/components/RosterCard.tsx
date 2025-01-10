@@ -5,7 +5,7 @@ export default function RosterCard({ member, sponsor } : RosterCardProps) {
   return (
     <>
       {member ? <div className="w-80 h-80 p-4 my-4">
-        <a href="#" className="group relative block bg-black rounded-lg">
+        <a href="#" className="group relative block bg-black rounded-xxl">
           <img
             alt="Headshot"
             src={`./assets/headshots/${member.img}`}
