@@ -1,19 +1,9 @@
 import PhotoContainer from "~/components/PhotoContainer";
 import { landingPagePhotos } from "~/data/photoData";
-import { sponsorData } from "~/data/sponsorData";
 import NewsSection from "~/components/NewsSection";
 
 export default function Index() {
   const photos = landingPagePhotos;
-  const sponsors = sponsorData;
-  const sponsorPhotos = sponsors
-    .map((sponsor, index) => ({
-      id: index,
-      src: sponsor.img,
-      alt: sponsor.name,
-      title: sponsor.name,
-      description: sponsor.description
-    }));
 
   return (
     <>
@@ -31,7 +21,6 @@ export default function Index() {
         </div>
 
       </div>
-      <PhotoContainer layout="row" photos={sponsorPhotos} size="medium" filePath="logos" photoStyle="contain" />
     </>
   );
 }
