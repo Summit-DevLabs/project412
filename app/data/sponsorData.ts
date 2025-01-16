@@ -1,10 +1,10 @@
 export const sponsorData = [
   {
-    name: "Fields Automotive",
-    img: "fields.jpg",
-    url: "fieldsauto.com",
+    name: "Visit Pittsburgh",
+    img: "VP_Logo_1.jpg",
+    url: "https://www.visitpittsburgh.com/",
     discountCode: "",
-    description: "At the Fields Auto Group, we work to provide our customers with vehicle options to suit every taste and style",
+    description: "VisitPITTSBURGH, along with our network of community partners, has worked to craft a 10-Year Tourism Development Plan that establishes the foundation for a more impactful and prosperous tourism ecosystem.",
     new: false,
   },
   {
@@ -17,11 +17,29 @@ export const sponsorData = [
 
   },
   {
-    name: "Big Dog Coffee",
-    img: "bigdog.jpg",
-    url: "https://www.bigdogcoffeeshop.com/",
+    name: "Never Second",
+    img: "Never2.png",
+    url: "https://never2.com/",
+    discountCode: "412Project30",
+    description: "Science First. Neversecond.",
+    new: false,
+
+  },
+  {
+    name: "Abus",
+    img: "Abus.png",
+    url: "https://www.abus.com/usa",
     discountCode: "",
-    description: "",
+    description: "At ABUS, we have a steadfast commitment: your peace of mind. Our primary focus is to deliver security and safety solutions that guarantee peace of mind for your residence, business, or leisure activities. For nearly a century, we have been developing security solutions for homes, diverse industries, and individuals on the move.",
+    new: false,
+
+  },
+  {
+    name: "Silca",
+    img: "silca.avif",
+    url: "silca.cc",
+    discountCode: "Team Store",
+    description: "The world leader in quality bicycle accessories with a relentless pursuit of perfection. Now offering chain lube, bar tape, pumps, tools, packs and more.",
     new: false,
 
   },
@@ -35,29 +53,11 @@ export const sponsorData = [
 
   },
   {
-    name: "Silca",
-    img: "silca.avif",
-    url: "silca.cc",
-    discountCode: "Team Store",
-    description: "",
-    new: false,
-
-  },
-  {
-    name: "Boyd Cycling",
-    img: "boyd.avif",
-    url: "https://boydcycling.com/",
+    name: "Big Dog Coffee",
+    img: "bigdog.jpg",
+    url: "https://www.bigdogcoffeeshop.com/",
     discountCode: "",
-    description: "Craft wheel manufacturer dedicated to producing the highest quality bicycle wheels.",
-    new: false,
-
-  },
-  {
-    name: "Flow Formulas",
-    img: "flow-blue.png",
-    url: "https://flowformulas.com/",
-    discountCode: "412Project30",
-    description: "",
+    description: "This quaint nook in a vintage building offers a variety of gourmet brews, light fare & desserts.",
     new: false,
 
   },
@@ -70,3 +70,4 @@ export const sponsorData = [
     new: true
   }
 ];
+
