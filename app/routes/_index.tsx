@@ -13,8 +13,7 @@ export default function Index() {
         </div> */}
         <div className="flex flex-col justify-center items-center">
           <PhotoContainer layout="col" photos={photos} size="large" filePath="media" photoStyle="cover" hideAnimation={true} />
-          <p className="text-white text-2xl py-12 px-4 lg:py-24 lg:px-24 text-center">Project 412 is focused on competition, philanthropic efforts and community engagement. We are dedicated to promoting the sport of cycling and inspiring the next generation, regardless of background, financial means or experience level.
-            Come ride with us!
+          <p className="text-white text-2xl py-12 px-4 lg:py-24 lg:px-24 text-center">Project 412 is a team that teams
           </p>
 
           <NewsSection />
