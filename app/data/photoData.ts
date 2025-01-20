@@ -1,3 +1,6 @@
+import { Photo } from "~/utils";
+
+
 // layout should be 'col', size should be 'large'
 export const landingPagePhotos = [
 	{
@@ -7,62 +10,12 @@ export const landingPagePhotos = [
 	},
 ];
 
-// layout should be 'grid', size should be 'medium'
-export const mediaPagePhotos = [
-	{
-		id: 4,
-		src: 'IMG_2725.jpg',
-		alt: 'IMG_2725',
-		description: '',
-		title: '',
-	},
-	{
-		id: 5,
-		src: 'IMG_3127.jpg',
-		alt: 'IMG_3127',
-		description: '',
-		title: '',
-	},
-	{
-		id: 6,
-		src: 'IMG_7331.jpg',
-		alt: 'IMG_7331',
-		description: '',
-		title: '',
-	},
+export const mediaPagePhotos: Photo[] = [
 	{
 		id: 2,
 		src: 'IMG_4966.jpg',
 		alt: 'John and Jon',
 		description: 'John and Jon at Piermont',
-		title: '',
-	},
-	{
-		id: 3,
-		src: 'IMG_4969.jpg',
-		alt: 'John and Jon',
-		description: 'John and Jon at Piermont',
-		title: '',
-	},
-	{
-		id: 7,
-		src: 'DSC01022.jpg',
-		alt: 'sponsor gear',
-		description: 'Kit reveal party!',
-		title: '',
-	},
-	{
-		id: 8,
-		src: 'DSC01034-Enhanced-NR.jpg',
-		alt: 'Small team photo around a table',
-		description: 'Some of the team at the kit reveal party',
-		title: '',
-	},
-	{
-		id: 9,
-		src: 'IMG_5128.jpg',
-		alt: 'Luis Jeff and John',
-		description: 'Luis, Jeff and John on a group ride',
 		title: '',
 	},
 	{
@@ -77,20 +30,6 @@ export const mediaPagePhotos = [
 		src: 'IMG_7669.jpg',
 		alt: 'Dan Uhranowsky',
 		description: 'Dan Uhranowsky, mid TT in AZ',
-		title: '',
-	},
-	{
-		id: 12,
-		src: 'IMG_9140.jpg',
-		alt: 'Team at the start line',
-		description: 'Team photo at the start of Road Apple',
-		title: '',
-	},
-	{
-		id: 13,
-		src: 'IMG_4482.jpg',
-		alt: 'Steve on the podium',
-		description: 'Steve Hunchuck 2nd place podium at Road Apple',
 		title: '',
 	},
 	{
@@ -143,38 +82,10 @@ export const mediaPagePhotos = [
 		title: '',
 	},
 	{
-		id: 21,
-		src: '240710-ACACrit-908.jpg',
-		alt: 'Nate on the front',
-		description: 'Nate on the front at the ACA Oval Crit - credit: Bob Mucciola',
-		title: '',
-	},
-	{
 		id: 22,
 		src: 'IMG_4242.jpg',
 		alt: 'John snags 1st at the Pan-Am Masters Games',
 		description: 'John snags 1st at the Pan-Am Masters Games',
-		title: '',
-	},
-	{
-		id: 22,
-		src: 'IMG_4244.jpg',
-		alt: 'Jeff on the podium at the Pan-Am Masters Games',
-		description: 'Jeff on the podium at the Pan-Am Masters Games',
-		title: '',
-	},
-	{
-		id: 23,
-		src: 'IMG_9878.jpg',
-		alt: 'Josh gets 1st place at the Pan-Am Masters Games',
-		description: 'Josh gets 1st place at the Pan-Am Masters Games',
-		title: '',
-	},
-	{
-		id: 24,
-		src: 'MDC211.jpg',
-		alt: 'Curtis on the podium at Mt. Davis',
-		description: 'Curtis on the podium at Mt. Davis - credit: Bob Mucciola',
 		title: '',
 	},
 	{
@@ -183,6 +94,7 @@ export const mediaPagePhotos = [
 		alt: 'John racing at Mt. Davis',
 		description: 'John racing at Mt. Davis - credit: Bob Mucciola',
 		title: '',
+		credit: 'Bob Mucciola',
 	},
 	{
 		id: 26,
@@ -190,13 +102,7 @@ export const mediaPagePhotos = [
 		alt: 'Curtis racing at Mt. Davis',
 		description: 'Curtis racing at Mt. Davis - credit: Bob Mucciola',
 		title: '',
-	},
-	{
-		id: 27,
-		src: 'MDC244.jpg',
-		alt: 'Steve getting ready to race at Mt. Davis',
-		description: 'Steve getting ready to race at Mt. Davis - credit: Bob Mucciola',
-		title: '',
+		credit: 'Bob Mucciola',
 	},
 	{
 		id: 2,
@@ -205,5 +111,4 @@ export const mediaPagePhotos = [
 		description: 'Curtis 3rd GC, Noah 5th GC at 2 Days of Buffalo',
 		title: '',
 	},
-	
 ];

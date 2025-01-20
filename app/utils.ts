@@ -9,6 +9,8 @@ export interface Photo {
   alt?: string;
   title?: string;
   description?: string;
+  credit?: string;
+  date?: Date;
 }
 
 export interface PhotoContainerProps {
