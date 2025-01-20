@@ -43,9 +43,9 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-white rounded-lg shadow-lg p-8 max-w-screen-xl mx-auto">
+      <div className="relative bg-white rounded-lg shadow-lg p-8 max-w-screen-xl mx-auto">
         <button
-          className="absolute top-10 right-10 bg-primary text-black text-4xl rounded-full w-12 h-12 flex items-center justify-center"
+          className="absolute -top-2 -right-2 bg-primary text-black text-4xl rounded-full w-12 h-12 flex items-center justify-center"
           onClick={onClose}
         >
           &times;
@@ -76,16 +76,16 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                       id="name"
                     />
                   </div>
-                    <div>
-                      <input
-                        className="w-full rounded-lg border border-gray-200 p-3 mt-2 mb-2 text-sm"
-                        placeholder="Email address"
-                        type="email"
-                        name="from_email"
-                        id="email"
-                      />
-                    </div>
-                    {/* <div>
+                  <div>
+                    <input
+                      className="w-full rounded-lg border border-gray-200 p-3 mt-2 mb-2 text-sm"
+                      placeholder="Email address"
+                      type="email"
+                      name="from_email"
+                      id="email"
+                    />
+                  </div>
+                  {/* <div>
                         <input
                           className="w-full rounded-lg border border-gray-200 p-3 mt-2 mb-2 text-sm"
                           placeholder="Phone Number (optional)"
