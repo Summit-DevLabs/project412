@@ -42,3 +42,11 @@ export interface Sponsor {
   description: string;
   newSponsor?: boolean;
 }
+export interface NewsItem {
+  id: string;
+  title: string;
+  category: string;
+  description: string;
+  imagePath: string;
+  span?: 'large' | 'small';
+}
