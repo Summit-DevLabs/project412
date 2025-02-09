@@ -18,5 +18,20 @@ export const newsItems: NewsItem[] = [
     imagePath: '/media/IMG_0247.jpg',
     span: 'small',
   },
-  // Add more news items as needed
+  {
+    id: '3',
+    title: 'Community Spotlight',
+    category: 'Community',
+    description: 'Highlighting outstanding contributions from our community members.',
+    imagePath: '/media/IMG_0247.jpg',
+    span: 'small',
+  },
+  {
+    id: '4',
+    title: 'Community Spotlight',
+    category: 'Community',
+    description: 'Highlighting outstanding contributions from our community members.',
+    imagePath: '/media/IMG_0247.jpg',
+    span: 'large',
+  },
 ];
