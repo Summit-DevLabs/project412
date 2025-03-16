@@ -42,3 +42,22 @@ export interface Sponsor {
   description: string;
   newSponsor?: boolean;
 }
+export interface NewsItem {
+  id: string;
+  title: string;
+  category: string;
+  description: string;    // Short preview description
+  content: string;        // Full article content (could be markdown)
+  imagePath: string;      // Main/hero image
+  additionalImages?: string[]; // Optional gallery
+  author: {
+    name: string;
+    avatar?: string;
+  };
+  publishedAt: Date;
+  updatedAt?: Date;
+  slug: string;          // URL-friendly version of title
+  tags?: string[];       // For related articles
+  readTime?: number;     // Estimated reading time in minutes
+  span?: 'large' | 'small';
+}
