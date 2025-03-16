@@ -1,6 +1,7 @@
 import PhotoContainer from "~/components/PhotoContainer";
 import { landingPagePhotos } from "~/data/photoData";
 import NewsSection from "~/components/NewsSection";
+import HeroSection from "~/components/HeroSection";
 
 export default function Index() {
   const photos = landingPagePhotos;
@@ -16,7 +17,7 @@ export default function Index() {
           <p className="text-white text-2xl py-12 px-4 lg:py-24 lg:px-24 text-center">Project 412 is focused on competition, philanthropic efforts and community engagement. We are dedicated to promoting the sport of cycling and inspiring the next generation, regardless of background, financial means or experience level.
             Come ride with us!
           </p>
-
+          <HeroSection />
           <NewsSection />
         </div>
 
