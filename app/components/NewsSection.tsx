@@ -1,23 +1,23 @@
 import { newsItems } from '../data/newsData';
-
+import type { NewsItem } from '../utils';
 
 export default function NewsSection() {
   return (
-    <section className=" py-16 sm:py-24">
+    <section className="py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Team News
+            Latest News
           </h2>
-          <div className="mt-3 h-1 w-20 bg-secondary rounded"></div>
+          <div className="mt-3 h-1 w-20 bg-white rounded"></div>
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {newsItems.map((item) => (
+          {newsItems.map((item, index) => (
             <article
               key={item.id}
               className={`group relative overflow-hidden rounded-2xl bg-gray-800/50 backdrop-blur-sm transition-all duration-300 hover:bg-gray-800/70 hover:shadow-2xl hover:shadow-indigo-500/10 
-                ${item.span === 'large' ? 'lg:col-span-2' : ''}`}
+                ${index % 3 === 0 ? 'lg:col-span-2' : ''}`}
             >
               <div className="aspect-[16/9] overflow-hidden">
                 <img
@@ -37,7 +37,7 @@ export default function NewsSection() {
                   </time>
                 </div>
 
-                <h3 className="mt-4 text-xl font-semibold leading-tight text-white group-hover:text-indigo-400 transition">
+                <h3 className="mt-4 text-xl font-semibold leading-tight text-white group-hover:text-primary transition">
                   {item.title}
                 </h3>
 
@@ -46,7 +46,7 @@ export default function NewsSection() {
                 </p>
 
                 <div className="mt-4 flex items-center gap-x-3">
-                  <button className="inline-flex items-center text-sm font-medium text-primary hover:text-indigo-300">
+                  <button className="inline-flex items-center text-sm font-medium text-white group-hover:text-primary">
                     Read more
                     <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
