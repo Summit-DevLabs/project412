@@ -1,5 +1,3 @@
-const heroImage = '/assets/media/IMG_6642.jpg';
-import Image from 'next/image';
 import { newsItems } from '../data/newsData';
 
 
@@ -11,7 +9,7 @@ export default function NewsSection() {
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Team News
           </h2>
-          <div className="mt-3 h-1 w-20 bg-indigo-500 rounded"></div>
+          <div className="mt-3 h-1 w-20 bg-secondary rounded"></div>
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -31,7 +29,7 @@ export default function NewsSection() {
 
               <div className="p-6">
                 <div className="flex items-center gap-x-4">
-                  <span className="inline-flex items-center rounded-full bg-indigo-500/10 px-3 py-1 text-sm font-medium text-indigo-400">
+                  <span className="inline-flex items-center rounded-full bg-indigo-500/10 px-3 py-1 text-sm font-medium text-primary">
                     {item.category}
                   </span>
                   <time className="text-sm text-gray-400">
@@ -48,7 +46,7 @@ export default function NewsSection() {
                 </p>
 
                 <div className="mt-4 flex items-center gap-x-3">
-                  <button className="inline-flex items-center text-sm font-medium text-indigo-400 hover:text-indigo-300">
+                  <button className="inline-flex items-center text-sm font-medium text-primary hover:text-indigo-300">
                     Read more
                     <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
