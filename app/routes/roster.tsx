@@ -1,51 +1,50 @@
 import { teamData } from '../data/teamData';
-import { FadeIn, FadeInStagger } from '~/components/FadeIn';
+import { FadeIn, FadeInStagger } from "~/components/FadeIn";
 
-export default function Roster() {
-  const team = teamData;
+export default function RosterPage() {
+  // Sort team members alphabetically by name
+  const sortedTeamMembers = [...teamData].sort((a, b) => 
+    a.lastName.localeCompare(b.lastName)
+  );
+
   return (
-    <>
-      <div className="bg-white py-16 sm:py-16">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <FadeInStagger>
-            <ul
-              role="list"
-              className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-8 xl:max-w-none"
-            >
-              {team
-                .sort((a, b) => a.lastName.localeCompare(b.lastName))
-                .map((member) => (
+    <section className="py-16 sm:py-24 ">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <FadeIn>
+          <div className="flex flex-col items-center text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Our Team
+            </h2>
+            <div className="mt-3 h-1 w-20 bg-white rounded"></div>
+          </div>
+        </FadeIn>
 
-                  <FadeIn>
-                    <li key={member.id} className="flex flex-col gap-6 xl:flex-row">
-                      <img alt={member.firstName} src={`assets/headshots/${member.img}`} className="aspect-[4/5] w-52 flex-none rounded-2xl object-fill" />
-                      <div className="flex-auto">
-                        <h3 className="text-lg/8 font-semibold tracking-tight text-gray-900">{member.firstName} {member.lastName}</h3>
-                      </div>
-                    </li>
-                  </FadeIn>
-                ))}
-            </ul>
-          </FadeInStagger>
-        </div>
-      </div>
-
-      <div className="bg-white py-32">
-        <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
-          <ul
-            role="list"
-            className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
-          >
-            {team.map((member) => (
-              <li key={member.firstName}>
-                <img alt="" src={`assets/headshots/${member.img}`} className="mx-auto size-56 rounded-full" />
-                <h3 className="mt-6 text-base/7 font-semibold tracking-tight text-gray-900">{member.firstName}</h3>
-
-              </li>
+        <FadeInStagger faster>
+          <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {sortedTeamMembers.map((member) => (
+              <FadeIn key={member.id}>
+                <div className="group relative">
+                  <div className="aspect-[3/4] overflow-hidden rounded-lg bg-gray-800">
+                    <img
+                      src={`assets/headshots/${member.img}`}
+                      alt={member.firstName}
+                      className="h-full w-full object-cover object-center transition duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="mt-4">
+                    <h3 className="text-lg font-semibold leading-6 text-white group-hover:text-primary transition">
+                      {member.firstName} {member.lastName}
+                    </h3>
+                    {/* <p className="text-sm text-gray-400">
+                      {member.category}
+                    </p> */}
+                  </div>
+                </div>
+              </FadeIn>
             ))}
-          </ul>
-        </div>
+          </div>
+        </FadeInStagger>
       </div>
-    </>
-  )
+    </section>
+  );
 }
