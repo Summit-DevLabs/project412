@@ -5,8 +5,6 @@ import type { NewsItem } from "~/utils";
 
 export const loader: LoaderFunction = async ({ params }) => {
   const { slug } = params;
-  // For now, return the first news item
-  // TODO: Implement actual data fetching based on slug
   return json({ article: newsItems[0] });
 };
 

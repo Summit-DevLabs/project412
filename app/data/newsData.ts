@@ -15,7 +15,7 @@ export const newsItems: NewsItem[] = [
       avatar: undefined
     },
     publishedAt: new Date(),
-    slug: ""
+    slug: 'latest-development-update',
   },
   {
     id: '2',
@@ -30,7 +30,7 @@ export const newsItems: NewsItem[] = [
       avatar: undefined
     },
     publishedAt: new Date(),
-    slug: ""
+    slug: 'community-spotlight',
   },
   {
     id: '3',
