@@ -47,7 +47,7 @@ export interface NewsItem {
   title: string;
   category: string;
   description: string;    // Short preview description
-  content: string;        // Full article content (could be markdown)
+  
   imagePath: string;      // Main/hero image
   additionalImages?: string[]; // Optional gallery
   author: {

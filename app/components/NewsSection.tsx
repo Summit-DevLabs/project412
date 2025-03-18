@@ -22,7 +22,7 @@ export default function NewsSection() {
             >
               <Link
                 key={item.id}
-                to={`news/${item.title.toLowerCase().replace(/\s+/g, '-')}`}
+                to={`news/${item.slug}`}
                 className="group"
               >
                 <div className="aspect-[16/9] overflow-hidden">
