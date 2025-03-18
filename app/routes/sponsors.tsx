@@ -16,11 +16,22 @@ export default function Sponsors() {
               {sponsors.map((sponsor) => (
                 <FadeIn>
                   <li key={sponsor.name} className="flex flex-col gap-6 xl:flex-row">
-                    <img alt={sponsor.name} src={`assets/logos/${sponsor.img}`} className="aspect-[5/4] w-52 flex-none rounded-2xl object-contain bg-white" />
-                    <div className="flex-auto">
-                      <h3 className="text-lg/8 font-semibold tracking-tight text-gray-900">{sponsor.name}</h3>
-                      <p className="mt-6 text-base/7 text-gray-600">{sponsor.description}</p>
-                    </div>
+                    <a 
+                      href={sponsor.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="group flex flex-col xl:flex-row gap-6 hover:opacity-75 transition-opacity"
+                    >
+                      <img 
+                        alt={sponsor.name} 
+                        src={`assets/logos/${sponsor.img}`} 
+                        className="aspect-[5/4] w-52 flex-none rounded-2xl object-contain bg-white" 
+                      />
+                      <div className="flex-auto">
+                        <h3 className="text-lg/8 font-semibold tracking-tight text-gray-900">{sponsor.name}</h3>
+                        <p className="mt-6 text-base/7 text-gray-600">{sponsor.description}</p>
+                      </div>
+                    </a>
                   </li>
                 </FadeIn>
               ))}
