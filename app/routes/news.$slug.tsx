@@ -32,7 +32,7 @@ export default function NewsArticle() {
       <div className="py-16 sm:py-24">
         <div className="flex flex-col items-center text-center">
           <div className="flex items-center gap-x-4">
-            <span className="inline-flex items-center rounded-full bg-indigo-500/10 px-3 py-1 text-sm font-medium text-primary">
+            <span className="inline-flex items-center rounded-full bg-gray-500 px-3 py-1 text-sm font-medium text-primary">
               {article.category}
             </span>
             <time className="text-sm text-gray-400">
@@ -47,10 +47,14 @@ export default function NewsArticle() {
           {article.author.name && (
             <div className="mt-6 flex items-center gap-x-4">
               {article.author.avatar && (
-                <img src={article.author.avatar} alt="" className="h-10 w-10 rounded-full bg-gray-50" />
+                <img 
+                  src={article.author.avatar} 
+                  alt={article.author.name} 
+                  className="h-12 w-12 rounded-full bg-gray-50 ring-2 ring-white shadow-sm" 
+                />
               )}
               <div className="text-sm leading-6">
-                <p className="font-semibold text-black">{article.author.name}</p>
+                <p className="font-semibold text-gray-900">By {article.author.name}</p>
               </div>
             </div>
           )}

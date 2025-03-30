@@ -1,6 +1,4 @@
-# VP Looking to repeat in Tour of Newport News
-
-Pittsburgh, PA - VP is gearing up for an exciting weekend of racing as they head to Virginia to compete in the highly anticipated Tour of Newport News, taking place from April 11-13, 2025. This three-day, four-race omnium has quickly become one of the premier cycling events on the East Coast, attracting top talent from across the region.
+Pittsburgh, PA - Visit Pittsburgh is gearing up for an exciting weekend of racing as they head to Virginia to compete in the highly anticipated Tour of Newport News, taking place from April 11-13, 2025. This three-day, four-race omnium has quickly become one of the premier cycling events on the East Coast, attracting top talent from across the region.
 
 The team will be represented across multiple categories, with riders competing in the Pro 1/2, 2/3, and 3/4 fields. Expectations are high following last year’s thrilling performance, highlighted by Dan Uhranowsky’s impressive victory in the Twilight Criterium in the Pro1/2 field. With the team’s depth and experience, they aim to build on past successes and make a strong showing in this year’s edition.
 
