@@ -39,7 +39,7 @@ export default function NewsSection() {
                       {item.category}
                     </span>
                     <time className="text-sm text-gray-400">
-                      {new Date().toLocaleDateString()}
+                    {item.publishedAt}
                     </time>
                   </div>
 

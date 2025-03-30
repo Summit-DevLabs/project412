@@ -54,8 +54,8 @@ export interface NewsItem {
     name: string;
     avatar?: string;
   };
-  publishedAt: Date;
-  updatedAt?: Date;
+  publishedAt: string;
+  updatedAt?: string;
   slug: string;          // URL-friendly version of title
   tags?: string[];       // For related articles
   readTime?: number;     // Estimated reading time in minutes

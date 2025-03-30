@@ -1,20 +1,27 @@
 import { newsItems } from '~/data/newsData';
-import { getArticleContent } from '~/utils/markdown';
 import { json } from '@remix-run/node';
 import type { LoaderFunctionArgs } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
+import { marked } from 'marked';
+import { readFileSync } from 'fs';
+import { join } from 'path';
 
 export async function loader({ params }: LoaderFunctionArgs) {
   const { slug } = params;
   const article = newsItems.find(item => item.slug === slug);
-  
+
   if (!article) {
     throw new Response("Not Found", { status: 404 });
   }
 
-  const content = getArticleContent(slug!);
-  
-  return json({ article, content });
+  try {
+    const filePath = join(process.cwd(), 'app', 'content', 'news', `${slug}.md`);
+    const content = readFileSync(filePath, 'utf-8');
+    return json({ article, content: marked(content) });
+  } catch (error) {
+    console.error(`Error reading markdown file for slug ${slug}:`, error);
+    return json({ article, content: '' });
+  }
 }
 
 export default function NewsArticle() {
@@ -29,7 +36,7 @@ export default function NewsArticle() {
               {article.category}
             </span>
             <time className="text-sm text-gray-400">
-              {new Date(article.publishedAt).toLocaleDateString()}
+              {article.publishedAt}
             </time>
           </div>
 
@@ -57,7 +64,16 @@ export default function NewsArticle() {
           />
         </div>
 
-        <div className="mt-10 prose prose-lg" dangerouslySetInnerHTML={{ __html: content }} />
+        <div className="mt-10 prose prose-lg max-w-none
+          prose-headings:text-gray-900
+          prose-p:text-gray-600
+          prose-strong:text-gray-900
+          prose-ul:text-gray-600
+          prose-li:text-gray-600
+          prose-a:text-primary hover:prose-a:text-primary/80
+          prose-blockquote:border-l-primary prose-blockquote:border-l-4 prose-blockquote:pl-4 prose-blockquote:italic"
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
       </div>
     </article>
   );
