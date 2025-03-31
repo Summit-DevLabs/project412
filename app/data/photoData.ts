@@ -111,4 +111,11 @@ export const mediaPagePhotos: Photo[] = [
 		description: 'Curtis 3rd GC, Noah 5th GC at 2 Days of Buffalo',
 		title: '',
 	},
+	{
+		id: 27,
+		src: 'BryanPark2025_Dan.jpg',
+		alt: 'Dan Uhranowsky',
+		description: 'Dan at Bryan Park 2025',
+		title: '',
+	},
 ];
