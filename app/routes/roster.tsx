@@ -26,7 +26,7 @@ export default function RosterPage() {
                 <div className="group relative">
                   <div className="aspect-[3/4] overflow-hidden rounded-lg bg-gray-800">
                     <img
-                      src={`assets/headshots/${member.img}`}
+                      src={member.img ? `assets/headshots/${member.img}` : '/assets/logos/VP_logo_1.jpg'}
                       alt={member.firstName}
                       className="h-full w-full object-cover object-center transition duration-300 group-hover:scale-105"
                     />

@@ -142,5 +142,46 @@ export const teamData = [
     category: 3,
     isActive: true,
     img: "noah.jpeg"
+  }, 
+  {
+    id: 20,
+    firstName: "Tim",
+    lastName: "Matchulat",
+    category: 3,
+    isActive: true,
+    img: ""
+  }, 
+  {
+    id: 21,
+    firstName: "Emil",
+    lastName: "Vasko",
+    category: 3,
+    isActive: true,
+    img: ""
+  }, 
+  {
+    id: 22,
+    firstName: "David",
+    lastName: "Schuster",
+    category: 3,
+    isActive: true,
+    img: ""
+  }, 
+  {
+    id: 23,
+    firstName: "Nate",
+    lastName: "Ricketts",
+    category: 3,
+    isActive: true,
+    img: ""
+  }, 
+  {
+    id: 24,
+    firstName: "Thiessen",
+    lastName: "Coleman",
+    category: 3,
+    isActive: true,
+    img: ""
   }
+  
 ];
